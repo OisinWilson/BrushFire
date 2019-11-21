@@ -27,9 +27,6 @@ Game::Game() :
 	}
 
 	m_map.init();
-
-	std::cout <<"Window size : " << m_window.getSize().x << " , " << m_window.getSize().y << std::endl;
-
 	m_wallPlacer = false;
 }
 

@@ -75,42 +75,42 @@ sf::RectangleShape & Tile::getTile()
 void Tile::setFlowField(sf::Vector2f t_pos)
 {
 	if (m_body.getPosition().x > t_pos.x
-		& m_body.getPosition().y > t_pos.y) 
+		&& m_body.getPosition().y > t_pos.y) 
 	{//top left
-		m_direction.setRotation(135);
+		m_direction.setRotation(225);
 	}
 	if (m_body.getPosition().x == t_pos.x
-		& m_body.getPosition().y > t_pos.y) 
+		&& m_body.getPosition().y > t_pos.y) 
 	{//top mid
-		m_direction.setRotation(90);
+		m_direction.setRotation(270);
 	}
 	if (m_body.getPosition().x < t_pos.x
-		& m_body.getPosition().y > t_pos.y) 
+		&& m_body.getPosition().y > t_pos.y) 
 	{//top right
-		m_direction.setRotation(45);
+		m_direction.setRotation(315);
 	}
 	if (m_body.getPosition().x < t_pos.x
-		& m_body.getPosition().y == t_pos.y) 
+		&& m_body.getPosition().y == t_pos.y) 
 	{//right
 		m_direction.setRotation(0);
 	}
 	if (m_body.getPosition().x < t_pos.x
-		& m_body.getPosition().y < t_pos.y) 
+		&& m_body.getPosition().y < t_pos.y) 
 	{ //down right
-		m_direction.setRotation(315);
+		m_direction.setRotation(45);
 	}
 	if (m_body.getPosition().x == t_pos.x
-		& m_body.getPosition().y < t_pos.y) 
+		&& m_body.getPosition().y < t_pos.y) 
 	{//down mid
-		m_direction.setRotation(270);
+		m_direction.setRotation(90);
 	}
 	if (m_body.getPosition().x > t_pos.x
-		& m_body.getPosition().y < t_pos.y) 
+		&& m_body.getPosition().y < t_pos.y) 
 	{//down left
-		m_direction.setRotation(225);
+		m_direction.setRotation(135);
 	}
 	if (m_body.getPosition().x > t_pos.x
-		& m_body.getPosition().y == t_pos.y) 
+		&& m_body.getPosition().y == t_pos.y) 
 	{//left
 		m_direction.setRotation(180);
 	}

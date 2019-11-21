@@ -1,20 +1,12 @@
 ﻿  Tile.cpp
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:  'argument': conversion from 'double' to 'T', possible loss of data
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:         with
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:         [
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:             T=float
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:         ]
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:  'argument': conversion from 'double' to 'T', possible loss of data
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:         with
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:         [
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:             T=float
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:         ]
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(78,37): warning C4554:  '&': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(83,37): warning C4554:  '&': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(88,37): warning C4554:  '&': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(93,38): warning C4554:  '&': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(98,37): warning C4554:  '&': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(103,37): warning C4554:  '&': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(108,37): warning C4554:  '&': check operator precedence for possible error; use parentheses to clarify precedence
-C:\Users\oisin\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(113,38): warning C4554:  '&': check operator precedence for possible error; use parentheses to clarify precedence
-  AiLab6.vcxproj -> C:\Users\oisin\Desktop\BrushFire\AiLab6\Debug\AiLab6.exe
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:         with
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:         [
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:             T=float
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,62): warning C4244:         ]
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:         with
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:         [
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:             T=float
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Tile.cpp(14,47): warning C4244:         ]
+  AiLab6.vcxproj -> C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\Debug\AiLab6.exe

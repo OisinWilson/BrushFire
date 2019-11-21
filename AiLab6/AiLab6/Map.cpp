@@ -229,9 +229,40 @@ std::vector<int> Map::brushFire(int t_tileIndex)
 	{
 		m_grid[indexes[i]].setCost(m_grid[t_tileIndex].getCost() + 1);
 
-		m_grid[indexes[i]].setFlowField(m_grid[t_tileIndex].getTile().getPosition());
+
+		int cheapistIndex = 0;
+		float cheapistCost = INT_MAX;
+
+		for (int q = 0; q < 8; q++)
+		{
+			int neighbourIndex = getLocalIndex(q, t_tileIndex);
+
+			if (neighbourIndex > -1)
+			{
+				sf::Vector2f distVec{ m_grid[m_startIndex].getTile().getPosition() - m_grid[neighbourIndex].getTile().getPosition() };
+
+				float disLen = std::sqrt(std::pow(distVec.x, 2) + std::pow(distVec.y, 2));
+
+				if (disLen < cheapistCost)
+				{
+					cheapistCost = disLen;
+					cheapistIndex = neighbourIndex;
+				}
+			}
+		}
+
+		m_grid[t_tileIndex].setFlowField(m_grid[cheapistIndex].getTile().getPosition());
 
 	}
+
+
+	/*for (int i = 0; i < indexes.size(); i++)
+	{
+		m_grid[indexes[i]].setCost(m_grid[t_tileIndex].getCost() + 1);
+		m_grid[indexes[i]].setFlowField(m_grid[t_tileIndex].getTile().getPosition());
+
+	}*/
+
 	return indexes;
 }
 
