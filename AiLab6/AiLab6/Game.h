@@ -40,6 +40,8 @@ private:
 	
 	bool m_exitGame; // control exiting game
 
+	bool m_wallPlacer;
+
 };
 
 #endif // !GAME_HPP

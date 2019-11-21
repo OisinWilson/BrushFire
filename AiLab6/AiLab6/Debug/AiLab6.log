@@ -1,6 +1,6 @@
 ﻿  Game.cpp
-  Map.cpp
-  Tile.cpp
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Game.cpp(88,35): warning C4018: '<': signed/unsigned mismatch
   main.cpp
   Generating Code...
-  AiLab6.vcxproj -> C:\Users\oisin\Desktop\AiLab6\Debug\AiLab6.exe
+C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\AiLab6\Game.cpp(90,35): warning C4018: '<': signed/unsigned mismatch
+  AiLab6.vcxproj -> C:\Users\Recycled Sloth\Desktop\BrushFire\AiLab6\Debug\AiLab6.exe

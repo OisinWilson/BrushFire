@@ -17,10 +17,20 @@
 /// load and setup thne image
 /// </summary>
 Game::Game() :
-	m_window{ sf::VideoMode{ 1500, 1500, 32U }, "Grid" , sf::Style::Titlebar | sf::Style::Close},
-	m_exitGame{false} //when true game will exit
+	m_window{ sf::VideoMode{ 900, 900, 32U }, "Grid" , sf::Style::Titlebar | sf::Style::Close},
+	m_exitGame{false}, //when true game will exit
+	m_map(m_ArialBlackfont)
 {
+	if (!m_ArialBlackfont.loadFromFile("ASSETS\\FONTS\\ariblk.ttf"))
+	{
+		std::cout << "problem loading arial black font" << std::endl;
+	}
+
+	m_map.init();
+
 	std::cout <<"Window size : " << m_window.getSize().x << " , " << m_window.getSize().y << std::endl;
+
+	m_wallPlacer = false;
 }
 
 /// <summary>
@@ -72,6 +82,36 @@ void Game::processEvents()
 		{
 			m_exitGame = true;
 		}
+		if (sf::Event::MouseButtonPressed == newEvent.type)
+		{
+			if (sf::Mouse::getPosition().x > m_window.getPosition().x + 9
+				&& sf::Mouse::getPosition().x < m_window.getPosition().x + m_window.getSize().x + 9
+				&& sf::Mouse::getPosition().y > m_window.getPosition().y
+				&& sf::Mouse::getPosition().y < m_window.getPosition().y + m_window.getSize().y + 30)
+			{
+				if (sf::Mouse::Left == newEvent.mouseButton.button)
+				{
+					m_map.StartPosClick(sf::Mouse::getPosition(m_window));
+				}
+				if (sf::Mouse::Right == newEvent.mouseButton.button)
+				{
+					m_map.goalPosClick(sf::Mouse::getPosition(m_window));
+				}
+				if (sf::Mouse::Middle == newEvent.mouseButton.button)
+				{
+					m_wallPlacer = true;
+				}
+			}
+		}
+		if (sf::Event::MouseButtonReleased == newEvent.type)
+		{
+			if (sf::Mouse::Middle == newEvent.mouseButton.button)
+			{
+				m_wallPlacer = false;
+			}
+		}
+
+			
 		if (sf::Event::KeyPressed == newEvent.type) //user pressed a key
 		{
 			processKeys(newEvent);
@@ -90,6 +130,14 @@ void Game::processKeys(sf::Event t_event)
 	{
 		m_exitGame = true;
 	}
+	if (sf::Keyboard::Q == t_event.key.code)
+	{
+		m_map.valueDisplayChange();
+	}
+	if (sf::Keyboard::W == t_event.key.code)
+	{
+		m_map.resetWalls();
+	}
 }
 
 /// <summary>
@@ -98,6 +146,11 @@ void Game::processKeys(sf::Event t_event)
 /// <param name="t_deltaTime">time interval per frame</param>
 void Game::update(sf::Time t_deltaTime)
 {
+	if (m_wallPlacer)
+	{
+		m_map.wallPosClick(sf::Mouse::getPosition(m_window));
+	}
+
 	if (m_exitGame)
 	{
 		m_window.close();
