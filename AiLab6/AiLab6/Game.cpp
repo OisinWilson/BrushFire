@@ -84,10 +84,11 @@ void Game::processEvents()
 		}
 		if (sf::Event::MouseButtonPressed == newEvent.type)
 		{
-			if (sf::Mouse::getPosition().x > m_window.getPosition().x + 9
-				&& sf::Mouse::getPosition().x < m_window.getPosition().x + m_window.getSize().x + 9
-				&& sf::Mouse::getPosition().y > m_window.getPosition().y
-				&& sf::Mouse::getPosition().y < m_window.getPosition().y + m_window.getSize().y + 30)
+			if (m_window.hasFocus() 
+				&& sf::Mouse::getPosition(m_window).x > 0
+				&& sf::Mouse::getPosition(m_window).x < 900
+				&& sf::Mouse::getPosition(m_window).y > 0
+				&& sf::Mouse::getPosition(m_window).y < 900)
 			{
 				if (sf::Mouse::Left == newEvent.mouseButton.button)
 				{

@@ -20,6 +20,17 @@ public:
 	void resetWalls();
 	void valueDisplayChange();
 	void init();
+	std::vector<int> brushFire(int t_tileIndex);
+
+	int getLocalIndex(int t_desiredIndex, int t_currentIndex);
+
+	int getTileIndex(sf::Vector2i t_mousePos);
+
+	std::vector<int> neighbourIndexVec;
+
+	void brushfireStart();
+	void brushfireClear();
+
 
 private:
 

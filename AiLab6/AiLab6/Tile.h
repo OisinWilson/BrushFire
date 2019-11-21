@@ -12,7 +12,8 @@ public:
 	void update();
 	void render(sf::RenderWindow & t_renderWindow);
 
-	void setText(sf::String & t_InputText);
+	void setCost(int t_cost);
+	int getCost();
 
 	void toggleTextDisplay();
 
@@ -21,13 +22,16 @@ public:
 	sf::Color getColour();
 
 
-	sf::RectangleShape getTile();
+	sf::RectangleShape & getTile();
 
+	void setFlowField(sf::Vector2f t_pos);
 
 private:
 
+	int m_cost;
 
 	sf::RectangleShape m_body;
+	sf::RectangleShape m_direction;
 
 	sf::Font & m_font;
 	sf::Text m_text;
